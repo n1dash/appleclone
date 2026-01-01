@@ -1,0 +1,155 @@
+/* ==========================
+   RESET & TYPOGRAPHY
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  color: #1d1d1f;
+  background-image: url("bg.jpg"); /* put your background image in project folder */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.85); /* keeps text readable */
+  z-index: -1;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.heading-nav {
+  background-color: #F5F5F7;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.apple_img img {
+  height: 18px;
+  width: 18px;
+}
+
+.heading_navigation {
+  flex: 1;
+}
+
+.heading_navigation ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  font-size: 14px;
+}
+
+.heading_navigation ul li a {
+  text-decoration: none;
+  color: #1d1d1f;
+  position: relative;
+  padding: 8px 0;
+}
+
+.heading_navigation ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #1d1d1f;
+  transition: width 0.3s ease;
+}
+
+.heading_navigation ul li a:hover::after {
+  width: 100%;
+}
+
+.search img,
+.cart img {
+  height: 22px;
+  margin-left: 18px;
+}
+
+/* ==========================
+   OFFER BAR
+========================== */
+.main_content1 {
+  height: 60px;
+  width: 100%;
+  background-color: #FFFFFF;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.main_content1 p {
+  color: #3c3c4399; /* subtle gray */
+  text-align: center;
+  line-height: 1.4;
+  padding-top: 20px;
+}
+
+/* ==========================
+   MAIN CONTENT & PRODUCTS
+========================== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.main_content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 80px auto;
+}
+
+.content1 h1 {
+  font-size: 72px;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to left, #367EE5,#7585AE, #A77B79, #D4734A, #E46D36); 
+  -webkit-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
+
+.content2 h1 {
+  font-size: 28px;
+  color: #858587;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.item1 img {
+  height: 200px; /* consistent size */
+  width: 200px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item1 img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
